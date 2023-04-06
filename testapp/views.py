@@ -11,3 +11,10 @@ def param(request):
     name = request.GET.get('name')
     meiername_result = meiername(name)
     return render(request, 'param.html', {'param_name':name, 'meiername_result':meiername_result})
+
+def form(request):
+    if request.method == "POST":
+        name = request.POST['my_inputs_name']
+        return render(request, 'form.html', {'name':name})
+    else:
+        return render(request, 'form.html', {})

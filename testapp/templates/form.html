@@ -1,0 +1,26 @@
+{% extends 'base.html' %} {% block content %}
+
+<br />
+<div class="col-md-6 offset-md-3">
+  <br />
+  <h1>Form</h1>
+  <form method="POST" action="{% url 'form' %}">
+    {% csrf_token %}
+    <div class="form-group">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Enter Name"
+        name="my_inputs_name"
+      />
+      <br />
+    </div>
+    <br />
+    <button type="submit" class="btn btn-secondary">Send</button>
+  </form>
+  <br />
+  <br />
+  <h1>Hi {{ name }}</h1>
+</div>
+
+{% endblock %}
