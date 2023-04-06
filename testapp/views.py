@@ -11,3 +11,6 @@ def param(request):
     name = request.GET.get('name')
     meiername_result = meiername(name)
     return render(request, 'param.html', {'param_name':name, 'meiername_result':meiername_result})
+
+def page_not_found_view(request):
+    return render(request, '404.html', status=404)

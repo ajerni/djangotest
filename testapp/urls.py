@@ -7,3 +7,5 @@ urlpatterns = [
     path('param/', views.param, name='param')
     
 ]
+
+hadler404 = 'testapp.views.page_not_found_view'
