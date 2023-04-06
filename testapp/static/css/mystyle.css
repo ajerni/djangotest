@@ -1,4 +1,9 @@
 .carousel {
-  width: 900px;
-  height: 400px;
+  width: 90%;
+  height: 90%;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+  filter: invert(100%);
 }
