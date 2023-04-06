@@ -24,9 +24,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-zy=2vd*7ax#nulsp&8@0^uo*f!1xc8f&cf7i&u*0ama+l(2!2i'
 
 # SECURITY WARNING: don't run with debug turned on in production!
+# python manage.py runserver --insecure (sonst werden im live Modus die static files nicht geladen)
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
 
 # Application definition
