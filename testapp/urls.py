@@ -9,6 +9,6 @@ urlpatterns = [
     path('param/', views.param, name='param'),
     path('form/', views.form, name='form'),
     path('usage/', views.usage, name='usage'),
-    path('todolist/', views.todolist, name='todolist'),
+    
     
 ]

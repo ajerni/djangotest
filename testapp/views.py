@@ -26,5 +26,3 @@ def usage(request):
     data2 = data[0]
     return render(request, 'usage.html', {'data':data, 'data2':data2})
 
-def todolist(request):
-    return render(request, 'todolist.html', {})

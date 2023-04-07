@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'testapp',
     'rest_framework',
     'courses',
+    'todo_list'
 ]
 
 MIDDLEWARE = [
