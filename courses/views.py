@@ -1,4 +1,8 @@
 from django.shortcuts import render
+from rest_framework import viewsets
+from .models import Course
+from .serializers import CourseSerializer
 
-def courses(request):
-    return render(request, 'courses.html', {})
+class CourseView(viewsets.ModelViewSets):
+    queryset = Course.objects.all()
+    serializer_class = CourseSerializer
