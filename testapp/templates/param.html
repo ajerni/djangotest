@@ -1,5 +1,7 @@
-{% extends 'base.html' %} {% block content %}
-<br />
+{% extends 'base.html' %} {% block content %} {% block title %}<title>
+  Name in param (GET)</title
+>{% endblock %} <br />
+
 <h1>Hi {{ param_name }}</h1>
 <br />
 <h4>Bsp: http://127.0.0.1:8000/param/?name=Andi</h4>

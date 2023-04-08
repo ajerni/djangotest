@@ -1,9 +1,10 @@
-{% extends 'base.html' %} {% block content %}
-
-<br />
+{% extends 'base.html' %} {% block content %} {% block title %}<title>
+  Name in form (POST)</title
+>{% endblock %}
 <div class="col-md-6 offset-md-3">
   <br />
-  <h1>Form</h1>
+  <h1>POST Form</h1>
+  <br />
   <form method="POST" action="{% url 'form' %}">
     {% csrf_token %}
     <div class="form-group">
@@ -13,7 +14,6 @@
         placeholder="Enter Name"
         name="my_inputs_name"
       />
-      <br />
     </div>
     <br />
     <button type="submit" class="btn btn-secondary">Send</button>
