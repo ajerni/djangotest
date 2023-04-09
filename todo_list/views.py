@@ -11,7 +11,7 @@ def todolist(request):
 
         if form.is_valid():
             form.save()
-            messages.success(request, ('Itemm has been added to list.'))
+            messages.success(request, ('Item has been added to list.'))
             all_items = list.objects.all
             return render(request, 'home_todo.html', {'all_items':all_items})
     else:
