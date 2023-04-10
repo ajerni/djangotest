@@ -37,10 +37,10 @@
               <a class="nav-link" href="{% url 'about' %}">About</a>
             </li>
           </ul>
-          <form class="d-flex" role="search" method="POST">
+          <form class="d-flex w-50" role="search" method="POST">
             {% csrf_token %}
             <input
-              class="form-control me-2"
+              class="form-control me-3"
               type="search"
               placeholder="To-do item"
               aria-label="add"

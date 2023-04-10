@@ -2,8 +2,6 @@
 <br />
 {% if item %}
 
-<h1>{{ item.item }}</h1>
-
 <form class="d-flex" role="search" method="POST">
   {% csrf_token %}
   <input
@@ -16,7 +14,9 @@
   />
   <input type="hidden" value="{{ item.completed }}" name="completed" />
 
-  <button class="btn btn-outline-secondary" type="submit">Save edit</button>
+  <button class="btn btn-outline-secondary w-25" type="submit">
+    Save edit
+  </button>
 </form>
 
 {% endif %} {% endblock %}
