@@ -1,5 +1,4 @@
 from django.shortcuts import render
-import requests
 
 def home(request):
     return render(request, 'home.html', {})
@@ -20,9 +19,10 @@ def form(request):
     else:
         return render(request, 'form.html', {})
     
-def usage(request):
+def usageshow(request):
+    import requests
     response = requests.get('http://127.0.0.1:8000/courses/')
     data = response.json()
     data2 = data[0]
-    return render(request, 'usage.html', {'data':data, 'data2':data2})
+    return render(request, 'usageshow.html', {'data':data, 'data2':data2})
 
