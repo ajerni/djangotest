@@ -21,7 +21,7 @@ def form(request):
     
 def usageshow(request):
     import requests
-    response = requests.get('http://127.0.0.1:8000/courses/')
+    response = requests.get('https://djangoerni.pythonanywhere.com/courses/')
     data = response.json()
     data2 = data[0]
     return render(request, 'usageshow.html', {'data':data, 'data2':data2})
