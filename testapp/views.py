@@ -14,7 +14,7 @@ def param(request):
 
 def form(request):
     if request.method == "POST":
-        name = request.POST['my_inputs_name']
+        name = request.POST['my_inputs_name'] # request.POST.get('my_inputs_name')
         return render(request, 'form.html', {'name':name})
     else:
         return render(request, 'form.html', {})
