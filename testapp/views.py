@@ -19,10 +19,10 @@ def form(request):
     else:
         return render(request, 'form.html', {})
     
-def usageshow(request):
-    import requests
-    response = requests.get('https://djangoerni.pythonanywhere.com/courses/')
-    data = response.json()
-    data2 = data[0]
-    return render(request, 'usageshow.html', {'data':data, 'data2':data2})
+# def usageshow(request):
+#     import requests
+#     response = requests.get('http:localhost:8000/courses/')
+#     data = response.json()
+#     data2 = data[0]
+#     return render(request, 'usageshow.html', {'data':data, 'data2':data2})
 
