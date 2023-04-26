@@ -10,3 +10,10 @@ urlpatterns = [
     path('form/', views.form, name='form'),
     # path('usageshow/', views.usageshow, name='usageshow'),
 ]
+
+htmx_urlpatterns = [
+    path('htmx/', views.htmx, name='htmx'),
+    path('check_username/', views.check_username, name='check_username'),
+]
+
+urlpatterns += htmx_urlpatterns

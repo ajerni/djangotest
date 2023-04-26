@@ -1,0 +1,16 @@
+{% extends 'base.html' %} {% block content %} {% block title %}<title>
+    Name in form (POST)</title
+  >{% endblock %}
+<br/>
+<h2>htmx for Ajax, dynamic CSS etc.</h2> <a href="https://htmx.org/">https://htmx.org</a>
+<br/>
+<br/><br/>
+<p>Type 'andi'...</p>
+<form method="POST" action="#" autocomplete='off'>
+    {% csrf_token %}
+    <input type="text" name="name" hx-post="/check_username/" hx-trigger="keyup" hx-swap="outerhtml" hx-target="#target">
+
+</form>
+<br/>
+<div id="target"></div>
+{% endblock %}

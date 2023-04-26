@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.http.response import HttpResponse
 
 def home(request):
     return render(request, 'home.html', {})
@@ -25,4 +26,15 @@ def form(request):
 #     data = response.json()
 #     data2 = data[0]
 #     return render(request, 'usageshow.html', {'data':data, 'data2':data2})
+
+def htmx(request):
+    return render(request, 'htmx.html', {})
+
+def check_username(request):
+    if request.method == "POST":
+        name = request.POST.get('name')
+        if name == 'andi':
+            return HttpResponse('<div style="color: red;">This username already exists</div>')
+        else:
+            return HttpResponse('<div style="color: green;">This username is available</div>')
 
